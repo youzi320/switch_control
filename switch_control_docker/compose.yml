@@ -1,0 +1,38 @@
+services:
+
+  # PHP Service
+  php:
+    build: './php_docker/'
+    volumes:
+      - ./www/:/var/www/html/
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+  # Apache Service
+  apache:
+    build: './apache_docker/'
+    depends_on:
+      - php
+    ports:
+      - "80:80"
+    volumes:
+      - ./www/:/var/www/html/
+# MYSQL Service
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: lamp_docker
+      MYSQL_USER: admin_lamp
+      MYSQL_PASSWORD: admin
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+
+  # phpMyAdmin Service
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
