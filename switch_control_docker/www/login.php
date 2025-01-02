@@ -12,6 +12,7 @@ if ($connect->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
     $username = $connect->real_escape_string($_POST['username']); //防止基本SQL injection
     $password = $connect->real_escape_string($_POST['password']); //防止基本SQL injection
 
