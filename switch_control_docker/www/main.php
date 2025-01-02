@@ -33,7 +33,6 @@
     #title {
       margin-top: 100px;
       font-size: 70px;
-      font-weight: bold;
     }
 
     #switch-container {
