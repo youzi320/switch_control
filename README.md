@@ -13,6 +13,12 @@
 - ngrok: 透過port forwarding，讓不同設備可以連到網頁伺服器
 - Arduino IDE: 設定USB端口，測試電腦與ESP32的連線
 
+### ESP32
+本專案用到4個ESP32，分別可標記為:
+1. sender: 連接電腦，用來接收使用者請求，傳送訊號給其他ESP32
+2. receiver_1: 連接伺服馬達，接收到訊號時開啟或關閉電源
+3. receiver_2: 連接伺服馬達，接收到訊號時開啟或關閉電源
+4. mid: 負責轉發訊號，避免receive_2離sender太遠無法接收到訊號
  
 ## 建置專案
 1. git clone https://github.com/youzi320/switch_control/
