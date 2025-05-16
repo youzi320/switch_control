@@ -30,7 +30,7 @@
 ```=
 sudo chmod 666 /dev/ttyUSB0
 ```
-7. docker compose
+7. Docker Compose
 ```=
 cd switch_control
 docker compose up -d
