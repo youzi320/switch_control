@@ -39,8 +39,8 @@ sudo chmod 666 /dev/ttyUSB0
 cd switch_control
 docker compose up -d
 ```
-8. 打開瀏覽器，預設登入帳號為: admin 與密碼為: admin
-9. 將傳入recive_1, receive_2 code的ESP32街上伺服馬達，並安裝在電源旁
+8. 打開瀏覽器，預設登入帳號為: admin ，密碼為: admin
+9. 將傳入recive_1, receive_2 code的ESP32接上伺服馬達，並安裝在電源旁
 10. 透過ngrok進行端口轉發，即可在行動裝置上控制電源開關
 
 ## 搭建LAMP環境中的檔案說明
@@ -53,4 +53,4 @@ docker compose up -d
 - login.html : 登入頁面
 - login.php : 查詢資料庫，並設置 Cookie 與 Session
 - main.php : 驗證登入，控制開關頁面
-- control.php : 傳送訊號到ESP32(sender)
+- control.php : 透過USB端口傳送訊號給ESP32(sender)
