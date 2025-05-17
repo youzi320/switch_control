@@ -21,7 +21,11 @@
 4. mid: 負責轉發訊號，避免receive_2離sender太遠無法接收到訊號
  
 ## 建置專案
-1. git clone https://github.com/youzi320/switch_control/
+
+1. git clone
+```=
+git clone https://github.com/youzi320/switch_control/
+```
 2. 用/ESP32/find_mac/find_mac.ino，查看r1,r2,mid的MAC
 3. 修改/ESP32/sender/sender.ino與/ESP32/mid/mid.ino程式碼中修改r1,r2,mid的MAC
 4. 準備四個ESP32，將/ESP32中sender,mid,receive_1, receive_2,的code上傳至ESP32中
