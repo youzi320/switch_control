@@ -9,7 +9,7 @@
 使用Docker搭建LAMP環境，其中
 - Apache: 建立伺服器，讓使用者可以連到網頁
 - MySQL: 存放使用者帳號密碼的資料庫
-- PHP: 用來與資料庫建立連線與驗證使用者身分
+- PHP: 用來與資料庫建立連線、驗證使用者身分、用USB端口傳送訊號給ESP32
 - ngrok: 透過port forwarding，讓不同設備可以連到網頁伺服器
 - Arduino IDE: 設定USB端口，測試電腦與ESP32的連線
 
