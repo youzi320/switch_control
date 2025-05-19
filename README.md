@@ -27,7 +27,7 @@
    git clone https://github.com/youzi320/switch_control/
    ```
 2. **用/ESP32/find_mac/find_mac.ino，查看r1,r2,mid的MAC**
-3. **修改/ESP32/sender/sender.ino與/ESP32/mid/mid.ino程式碼中修改r1,r2,mid的MAC**
+3. **在/ESP32/sender/sender.ino與/ESP32/mid/mid.ino程式碼中修改r1,r2,mid的MAC**
 4. **準備四個ESP32，將/ESP32中sender,mid,receive_1, receive_2,的code上傳至ESP32中**
 5. **將連接sender ESP32的USB插入電腦，並在Virtual Box中勾此USB設備(上方Devices->USB->找到設備)**
 6. **將USB設備新增讀寫權限，在VM中下載Arduino IDE測試ESP32通訊，並調整Baud，測試完後關掉Arduino IDE**
@@ -40,7 +40,7 @@
    docker compose up -d
    ```
 8. **打開瀏覽器，預設登入帳號為: admin ，密碼為: admin**
-9. **將傳入recive_1, receive_2 code的ESP32接上伺服馬達，並安裝在電源旁**
+9. **將傳入recive_1, receive_2程式碼的ESP32接上伺服馬達，並安裝在電源旁**
 10. **透過ngrok進行端口轉發，即可在行動裝置上控制電源開關**
 
 ## 搭建LAMP環境中的檔案說明
