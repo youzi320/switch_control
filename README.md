@@ -29,7 +29,7 @@
 2. **用 /ESP32/find_mac/find_mac.ino ，查看r1(receive_1),r2(receive_2),mid的MAC**
 3. **在 /ESP32/sender/sender.ino 與 /ESP32/mid/mid.ino 程式碼中修改r1(receive_1),r2(receive_2),mid的MAC**
 4. **準備四個ESP32，將/ESP32中sender,mid,receive_1, receive_2,的程式碼上傳至ESP32中**
-5. **將連接sender ESP32的USB插入電腦，並在Virtual Box中勾此USB設備(上方Devices->USB->找到設備)**
+5. **將連接sender ESP32的USB插入電腦，並在Virtual Box中勾選此USB設備(上方Devices->USB->找到設備)**
 6. **將USB設備新增讀寫權限**
    ```=
    sudo chmod 666 /dev/ttyUSB0
@@ -40,7 +40,7 @@
    cd switch_control
    docker compose up -d
    ```
-9. **打開瀏覽器，預設登入帳號為: admin ，密碼為: admin**
+9. **打開瀏覽器並登入開關控制頁面，預設登入帳號為: admin ，密碼為: admin**
 10. **將傳入recive_1, receive_2程式碼的ESP32接上伺服馬達，並安裝在電源旁**
 11. **透過ngrok進行端口轉發，即可在行動裝置上控制電源開關**
 
